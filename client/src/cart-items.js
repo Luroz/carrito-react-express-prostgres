@@ -1,35 +1,35 @@
 export default [
   {
     id: 1,
-    title: "Samsung Galaxy S7",
-    price: 599.99,
+    title: "Papa",
+    price: 50,
     img:
-      "https://res.cloudinary.com/diqqf3eq2/image/upload/v1583368215/phone-2_ohtt5s.png",
+      "http://www.gstatic.com/hostedimg/a0646086d261aecb_landing",
     amount: 1,
     
   },
   {
     id: 2,
-    title: "google pixel ",
-    price: 499.99,
+    title: "Lechuga ",
+    price: 50,
     img:
-      "https://res.cloudinary.com/diqqf3eq2/image/upload/v1583371867/phone-1_gvesln.png",
+      "http://www.gstatic.com/hostedimg/9512445ef2453d03_landing",
     amount: 1
   },
   {
     id: 3,
-    title: "Xiaomi Redmi Note 2",
-    price: 699.99,
+    title: "Cebolla",
+    price: 40,
     img:
-      "https://res.cloudinary.com/diqqf3eq2/image/upload/v1583368224/phone-3_h2s6fo.png",
+      "http://www.gstatic.com/hostedimg/006cf1ebee5f652d_landing",
     amount: 1
   },
   {
     id: 4,
-    title: "Xiaomi Redmi Note 2",
-    price: 699.99,
+    title: "Tomate",
+    price: 40,
     img:
-      "https://res.cloudinary.com/diqqf3eq2/image/upload/v1583368224/phone-3_h2s6fo.png",
+      "http://www.gstatic.com/hostedimg/f6158b1deb80b4ed_landing",
     amount: 0
   }
 ];
