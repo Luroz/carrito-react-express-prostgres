@@ -4,6 +4,9 @@ import { connect } from "react-redux";
 import { CLEAR_CART, GET_TOTALS } from "../actions";
 
 const CartContainer = ({ cart = [], total, dispatch }) => {
+
+  const [tipoActual, setTipoActual] = React.useState('ninguno');
+
   React.useEffect(() => {
     dispatch({ type: GET_TOTALS });
   }, [cart, dispatch]);
@@ -23,13 +26,48 @@ const CartContainer = ({ cart = [], total, dispatch }) => {
       {/* cart header */}
       <header>
         <h2>Catalog</h2>
+        <button
+          className="btn clear-btn"
+          onClick={() => setTipoActual('fruta')}
+        >
+          Fruits
+        </button>
+        <button
+          className="btn clear-btn"
+          onClick={() => setTipoActual('vegetal')}
+        >
+          Vegetables
+        </button>
       </header>
       {/* cart items */}
-      <article>
-        {cart.map(item => {
-          return <CartItem key={item.id} {...item} />;
-        })}
-      </article>
+      {
+        tipoActual === 'ninguno' && (
+          <article>
+            {cart.map(item => {
+              return <CartItem key={item.id} {...item} />;
+            })}
+          </article>
+        )
+      }
+      {
+        tipoActual === 'fruta' && (
+          <article>
+            {cart.filter(item => item.type === 'fruta').map(item => {
+              return <CartItem key={item.id} {...item} />;
+            })}
+          </article>
+        )
+      }
+      {
+        tipoActual === 'vegetal' && (
+          <article>
+            {cart.filter(item => item.type === 'vegetal').map(item => {
+              return <CartItem key={item.id} {...item} />;
+            })}
+          </article>
+        )
+      }
+
       {/* cart footer */}
       <footer>
         <hr />
