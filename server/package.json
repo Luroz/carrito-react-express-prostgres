@@ -1,0 +1,26 @@
+{
+  "name": "carrito-react-node-postgres-client",
+  "version": "1.0.0",
+  "description": "Full stack test project using prostgre express and react",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "env-cmd -f ./.env nodemon api/server.js"
+  },
+  "author": "Luis Pirela",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "env-cmd": "^10.1.0",
+    "express": "^4.17.1",
+    "express-rate-limit": "^5.2.6",
+    "helmet": "^4.4.1",
+    "logrocket": "^1.0.14",
+    "morgan": "^1.10.0",
+    "mysql": "^2.18.1",
+    "nodemon": "^2.0.7",
+    "pg": "^8.5.1"
+  }
+}
